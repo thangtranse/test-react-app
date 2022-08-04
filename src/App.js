@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Todo from "./components/todo";
+import HelloWorld from "./components/helloWorld";
 function App() {
+  const todo = [
+    { id: 1, title: "Xin chao", completed: true },
+    { id: 2, title: "Hello", completed: false },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HelloWorld />
+      <hr />
+      {todo.map((data, index) => {
+        return <Todo key={`todo-${index}`} todo={data} />;
+      })}
     </div>
   );
 }
