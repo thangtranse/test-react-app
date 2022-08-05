@@ -17,6 +17,10 @@
     }
   },
   "lint-staged": {
+    "*.(js|css)": [
+      "prettier --write",
+      "git add"
+    ],
     ".js": [
       "npm run lint:fix",
       "npm run lint"

@@ -28,3 +28,28 @@ Tạo file .eslinrc và config cho Eslint:
   }
 }
 ```
+
+Thiết lập husky và lint-staged
+
+```js
+  "scripts": {
+    "start": "react-scripts start",
+    "lint:fix": "eslint src/*.js --fix",
+    "lint": "eslint src/*.js",
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|css)": [
+      "prettier --write",
+      "git add"
+    ],
+    ".js": [
+      "npm run lint:fix",
+      "npm run lint"
+    ]
+  },
+```
