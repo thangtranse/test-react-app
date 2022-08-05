@@ -27,6 +27,5 @@ test("should render todo with props.completed is false", () => {
 test("matches snapshot", () => {
   const props = { id: 2, title: "Hello", completed: false };
   const tree = renderer.create(<Todo todo={props} />).toJSON();
-  expect(tree).toMatchSnapshot()
-  
+  expect(tree).toMatchSnapshot();
 });

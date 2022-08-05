@@ -6,6 +6,24 @@
 npm install --save-dev eslint babel-eslint eslint-config-prettier eslint-config-airbnb-base eslint-plugin-react eslint-plugin-prettier
 ```
 
+```bash
+npm install --save-dev --save-exact prettier
+```
+
+- Here docs: [prettier](https://prettier.io/docs/en/install.html)
+
+```bash
+npm install husky --save-dev
+```
+
+- Here docs: [husky](https://typicode.github.io/husky/#/)
+
+```bash
+npm install --save-dev lint-staged
+```
+
+- Here docs: [lint-staged](https://github.com/okonet/lint-staged#readme)
+
 Tạo file .eslinrc và config cho Eslint:
 
 ```js
