@@ -47,8 +47,8 @@ install more
 npm install --save-dev @testing-library/react
 ```
 
-here docs: [jestjs](https://jestjs.io/)
-
+- here docs: [jestjs](https://jestjs.io/)
+- here repo: [jestjs](https://github.com/testing-library/jest-dom)
 
 
 
