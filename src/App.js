@@ -1,5 +1,5 @@
 import Todo from "./components/todo";
-import HelloWorld from "./components/helloWorld";
+import HelloWorld from './components/helloWorld';
 
 function App() {
   const todo = [
