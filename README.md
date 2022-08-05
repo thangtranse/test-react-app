@@ -18,6 +18,23 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm test:e2e`
+
+Before to run `npm test:e2e` you must start project:
+
+```bash
+yarn build
+yarn serve
+# or
+npm run build
+npm run serve
+```
+
+when project start `http://localhost:xxxx`
+
+```bash
+npm test:e2e
+```
 
 ### `npm run build`
 
@@ -50,7 +67,15 @@ npm install --save-dev @testing-library/react
 - here docs: [jestjs](https://jestjs.io/)
 - here repo: [jestjs](https://github.com/testing-library/jest-dom)
 
+```bash
+npm install pupperteer --save
+```
 
+- here docs: [jestjs](https://pptr.dev)
+
+```bash
+npm install -g serve
+```
 
 ## Learn More
 
