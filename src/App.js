@@ -1,6 +1,6 @@
 import Todo from "./components/todo";
 import HelloWorld from "./components/helloWorld";
-
+import CountComponent from "./components/count/count";
 function App() {
   const todo = [
     { id: 1, title: "Xin chao", completed: true },
@@ -13,6 +13,9 @@ function App() {
       {todo.map((data, index) => {
         return <Todo key={`todo-${index}`} todo={data} />;
       })}
+      <hr />
+      <hr />
+      <CountComponent />
     </div>
   );
 }
