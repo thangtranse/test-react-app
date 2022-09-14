@@ -1,8 +1,7 @@
 import Todo from "./components/todo";
 import HelloWorld from "./components/helloWorld";
-import CountComponent from "./components/count/count";
+import { CountComponent, CountFirstComponent } from "./components/count/count";
 function App() {
-  
   const todo = [
     { id: 1, title: "Xin chao", completed: true },
     { id: 2, title: "Hello", completed: false },
@@ -21,6 +20,7 @@ function App() {
       <hr />
       <hr />
       <CountComponent />
+      <CountFirstComponent />
     </div>
   );
 }
