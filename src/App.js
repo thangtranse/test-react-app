@@ -2,10 +2,15 @@ import Todo from "./components/todo";
 import HelloWorld from "./components/helloWorld";
 
 function App() {
+  
   const todo = [
     { id: 1, title: "Xin chao", completed: true },
     { id: 2, title: "Hello", completed: false },
+    { id: 3, title: "Hi", completed: false },
+    { id: 4, title: "Chao", completed: false },
+    { id: 5, title: "Hu hu", completed: false },
   ];
+
   return (
     <div className="App">
       <HelloWorld />
