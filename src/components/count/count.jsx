@@ -2,14 +2,32 @@ import React from "react";
 
 const orders = [300, 200, 500];
 
+function CountDocumentComponent() {
+  return (
+    <>
+      <p>React.useState</p>
+      <ol>
+        <li>
+          Thực hiện 1 phép toán logic sau đó sử dụng kết quả đó gán cho State để
+          sử dụng, tuy nhiên ta nhận thấy mỗi lần Re-render thì phép tính logic
+          đó lại được thực thi lại
+        </li>
+        <li>
+          Sử dụng sự kiện onClick để tăng giá trị của state count lên tuy nhiên
+          nó không tăng theo ý muốn
+        </li>
+      </ol>
+    </>
+  );
+}
+
 function CountComponent() {
 
   const [total, setTotal] = React.useState(() => {
     const totalFnc = orders.reduce((num, cur) => num + cur);
-    console.log('React.useState', totalFnc);
+    console.log("React.useState", totalFnc);
     return totalFnc;
   });
-
   const [count, setCount] = React.useState(0);
 
   const handleClickCount = () => {
@@ -21,9 +39,10 @@ function CountComponent() {
     setTotal(total + 1);
   };
 
-  console.log("re-render");
+  console.log("re-render", "CountComponent");
   return (
-    <div style={{border: '2px solid #333'}}>
+    <div style={{ border: "2px solid #333" }}>
+      <CountDocumentComponent />
       <h1>{count}</h1>
       <button onClick={handleClickCount}>click!</button>
       <h1>Default: {total}</h1>
@@ -32,9 +51,8 @@ function CountComponent() {
 }
 
 function CountFirstComponent() {
-  
   const totalFnc = orders.reduce((num, cur) => num + cur);
-  console.log("Total after useState:", totalFnc)
+  console.log("Total after useState:", totalFnc);
   const [total, setTotal] = React.useState(totalFnc);
   const [count, setCount] = React.useState(0);
 
@@ -45,14 +63,10 @@ function CountFirstComponent() {
     setCount(count + 1);
   };
 
-  console.log("re-render");
+  console.log("re-render", "CountFirstComponent");
   return (
-    <div style={{border: '2px solid #333'}}>
-      <p>React.useState</p>
-      <ol>
-        <li>Thực hiện 1 phép toán logic sau đó sử dụng kết quả đó gán cho State để sử dụng, tuy nhiên ta nhận thấy mỗi lần Re-render thì phép tính logic đó lại được thực thi lại</li>
-        <li>Sử dụng sự kiện onClick để tăng giá trị của state count lên tuy nhiên nó không tăng theo ý muốn</li>
-      </ol>
+    <div style={{ border: "2px solid #333" }}>
+      <CountDocumentComponent />
       <h1>{count}</h1>
       <button onClick={handleClickCount}>click!</button>
       <h1>Default: {total}</h1>
@@ -60,7 +74,4 @@ function CountFirstComponent() {
   );
 }
 
-export {
-  CountComponent,
-  CountFirstComponent
-};
+export { CountComponent, CountFirstComponent };
