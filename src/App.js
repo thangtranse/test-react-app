@@ -1,7 +1,7 @@
 import Todo from "./components/todo";
 import HelloWorld from "./components/helloWorld";
 import { CountComponent, CountFirstComponent } from "./components/count/count";
-
+import { OrialTestFirstComponent } from "./components/orialTest";
 const todo = [
   { id: 1, title: "Xin chao", completed: true },
   { id: 2, title: "Hello", completed: false },
@@ -18,6 +18,9 @@ function App() {
       {todo.map((data, index) => {
         return <Todo key={`todo-${index}`} todo={data} />;
       })}
+      <hr />
+      <hr />
+      <OrialTestFirstComponent />
       <hr />
       <hr />
       <CountComponent />
