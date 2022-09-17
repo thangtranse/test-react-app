@@ -1,7 +1,7 @@
-import Todo from "./components/todo";
-import HelloWorld from "./components/helloWorld";
-import { CountComponent, CountFirstComponent } from "./components/count/count";
-import { OrialTestFirstComponent } from "./components/orialTest";
+import Todo from "../components/todo";
+import HelloWorld from "../components/helloWorld";
+import { CountComponent, CountFirstComponent } from "../components/count/count";
+import { OrialTestFirstComponent } from "../components/orialTest";
 const todo = [
   { id: 1, title: "Xin chao", completed: true },
   { id: 2, title: "Hello", completed: false },
@@ -10,7 +10,7 @@ const todo = [
   { id: 5, title: "Hu hu", completed: false },
 ];
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <HelloWorld />
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
