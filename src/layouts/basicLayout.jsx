@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 function BasicLayout({ child }) {
   return (
     <>
-    demo git cli
+      demo git cli
       <Outlet />
     </>
   );
