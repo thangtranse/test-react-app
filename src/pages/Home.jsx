@@ -1,4 +1,3 @@
-import { CountComponent, CountFirstComponent } from "../components/count/count";
 import HelloWorld from "../components/helloWorld";
 import Todo from "../components/todo";
 
@@ -18,9 +17,6 @@ function Home() {
       {todo.map((data, index) => {
         return <Todo key={`todo-${index}`} todo={data} />;
       })}
-      <hr />
-      <CountComponent />
-      <CountFirstComponent />
     </div>
   );
 }

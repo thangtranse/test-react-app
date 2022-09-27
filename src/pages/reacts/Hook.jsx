@@ -1,5 +1,15 @@
+import {
+  CountComponent,
+  CountFirstComponent,
+} from "../../components/count/count";
+
 function Hook() {
-  return <>HOOK</>;
+  return (
+    <>
+      <CountComponent />
+      <CountFirstComponent />
+    </>
+  );
 }
 
 export default Hook;
