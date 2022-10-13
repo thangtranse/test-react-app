@@ -108,6 +108,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+### Config Project
+
+1. https://shivarajbakale.com/react/setting-up-commitlint-commitizen/
+
 # REF
 
 1. https://blog.logrocket.com/react-end-to-end-testing-jest-puppeteer/
