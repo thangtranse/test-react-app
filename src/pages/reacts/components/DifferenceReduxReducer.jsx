@@ -27,26 +27,32 @@ export default function DifferenceReduxReducer() {
             Còn nếu như App của bạn cần phải xử lý nhiều logic phức tạp thì lúc
             này bạn nên dùng sagas hoặc là middleware của Redux. Ngoài ra Redux
             còn cung cấp cho chúng ta một vài lợi thế quan trọng:
-            <ul>
-              <li>
+          </Typography>
+          <ul>
+            <li>
+              <Typography>
                 Browser Tools: bạn có thể sử dụng React Dev Tools để debug ứng
                 dụng của mình. Nó cho phép chúng ta xem lại các dispatched
                 actions, kiểm tra state và time travel. Bạn có thể chuyển đổi
                 qua lại lịch sử của action và kiểm tra state trông như thế nào
                 sau mỗi dispatched action.
-              </li>
-              <li>
+              </Typography>
+            </li>
+            <li>
+              <Typography>
                 Testing: Redux dựa trên các pure function nên dễ dàng thực hiện
                 kiểm thử. Tất cả các bài test đều tập trung vào việc kiểm tra
                 outputs dựa trên các inputs đã cho.
-              </li>
-              <li>
+              </Typography>
+            </li>
+            <li>
+              <Typography>
                 Patterns và tổ chức code: Redux được nghiên cứu kỹ lưỡng và có
                 công thức cho hầu hết các vấn đề. Có một phương pháp gọi là
                 Ducks mà bạn có thể sử dụng để tổ chức code Redux.
-              </li>
-            </ul>
-          </Typography>
+              </Typography>
+            </li>
+          </ul>
         </AccordionDetails>
       </Accordion>
     </div>

@@ -1,8 +1,9 @@
 import React from "react";
-
+import MemoDocumentComponent from "./content";
 const orders = [300, 200, 500];
 
-function CountDocumentComponent() {
+function DocumentComponent() {
+  console.log("Component Re-render (Don't use react memo)");
   return (
     <div style={{ border: "2px solid #333", margin: 10, padding: 10 }}>
       <p>React.useState</p>
@@ -35,14 +36,16 @@ function CountComponent() {
     setCount((prevState) => prevState + 1);
     setCount((prevState) => prevState + 1);
     setCount((prevState) => prevState + 1);
-
     setTotal(total + 1);
   };
-
   console.log("re-render", "CountComponent");
   return (
     <div style={{ border: "2px solid #333", margin: 10, padding: 10 }}>
-      <CountDocumentComponent />
+      <p>
+        Ví dụ sử dụng component <i>DocumentComponent</i> khi không có{" "}
+        <i>memo</i>, ta nhận thấy component bị re-render theo component cha.
+      </p>
+      <DocumentComponent />
       <h1>{count}</h1>
       <button onClick={handleClickCount}>click!</button>
       <h1>Default: {total}</h1>
@@ -66,10 +69,14 @@ function CountFirstComponent() {
   };
 
   console.log("re-render", "CountFirstComponent");
-  
+
   return (
     <div style={{ border: "2px solid #333", margin: 10, padding: 10 }}>
-      <CountDocumentComponent />
+      <p>
+        Ví dụ sử dụng component <i>DocumentComponent</i> có{" "}
+        <i>memo</i>, ta nhận thấy component không bị re-render theo component cha.
+      </p>
+      <MemoDocumentComponent />
       <h1>{count}</h1>
       <button onClick={handleClickCount}>click!</button>
       <h1>Default: {total}</h1>

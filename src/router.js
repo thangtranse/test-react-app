@@ -11,6 +11,7 @@ import StyleCustomPage from "./pages/mui/StyleCustom";
 import Hook from "./pages/reacts/Hook";
 import StatePropPage from "./pages/reacts/StateProp";
 import Redux from "./pages/reacts/Redux";
+import Memo from "./pages/reacts/Memo";
 import UseReducer from "./pages/reacts/UseReducer";
 import CallBack from "./pages/reacts/CallBack";
 import UseContextPage from "./pages/reacts/UseContext";
@@ -61,6 +62,11 @@ export default createBrowserRouter([
         path: "redux",
         name: "Redux",
         element: <Redux />,
+      },
+      {
+        path: "memo",
+        name: "Memo",
+        element: <Memo />,
       },
       {
         path: "callBack",
