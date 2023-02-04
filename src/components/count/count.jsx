@@ -28,8 +28,8 @@ function CountComponent() {
     console.log("React.useState", totalFnc);
     return totalFnc;
   });
-  const [count, setCount] = React.useState(0);
 
+  const [count, setCount] = React.useState(0);
   const handleClickCount = () => {
     // Callback -> gọi ntn thì giá trị sẽ lập tức +3
     setCount((prevState) => prevState + 1);
