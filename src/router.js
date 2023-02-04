@@ -9,7 +9,11 @@ import MUIPage from "./pages/mui";
 import StyleCustomPage from "./pages/mui/StyleCustom";
 
 import Hook from "./pages/reacts/Hook";
+import StatePropPage from "./pages/reacts/StateProp";
 import Redux from "./pages/reacts/Redux";
+import UseReducer from "./pages/reacts/UseReducer";
+import CallBack from "./pages/reacts/CallBack";
+import UseContextPage from "./pages/reacts/UseContext";
 
 export default createBrowserRouter([
   {
@@ -44,6 +48,11 @@ export default createBrowserRouter([
         element: <></>,
       },
       {
+        path: "state-prop",
+        name: "State and Prop",
+        element: <StatePropPage />,
+      },
+      {
         path: "hook",
         name: "Hook",
         element: <Hook />,
@@ -52,6 +61,21 @@ export default createBrowserRouter([
         path: "redux",
         name: "Redux",
         element: <Redux />,
+      },
+      {
+        path: "callBack",
+        name: "CallBack",
+        element: <CallBack />,
+      },
+      {
+        path: "useReducer",
+        name: "useReducer()",
+        element: <UseReducer />,
+      },
+      {
+        path: "useContext",
+        name: "useContext()",
+        element: <UseContextPage />,
       },
     ],
   },

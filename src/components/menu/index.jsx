@@ -37,7 +37,6 @@ const LoopRenderListMenu = React.memo(({ data }) => {
   const handleClick = () => {
     setOpen((prevOpen) => !prevOpen);
   };
-
   if (data.children && data.children.length > 1) {
     return (
       <>
@@ -47,7 +46,13 @@ const LoopRenderListMenu = React.memo(({ data }) => {
           open={open}
           onClick={handleClick}
         />
-        <Collapse component="li" in={open} timeout="auto" unmountOnExit>
+        <Collapse
+          sx={{ paddingLeft: 5, with: "auto" }}
+          component="li"
+          in={open}
+          timeout="auto"
+          unmountOnExit
+        >
           <List disablePadding>
             {data.children.map((x, i) => {
               let path = data.path + `/` + x.path;
