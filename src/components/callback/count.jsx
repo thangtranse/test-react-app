@@ -20,13 +20,6 @@ function CountComponent() {
     setCount((prevState) => prevState + 1);
     setTotal(total + 1);
   };
-  const handleClickCountUseCallback = React.useCallback(() => {
-    // Callback -> gọi ntn thì giá trị sẽ lập tức +3
-    setCount((prevState) => prevState + 1);
-    setCount((prevState) => prevState + 1);
-    setCount((prevState) => prevState + 1);
-    setTotal(total + 1);
-  }, []);
   // ---------
   console.log("re-render", "Component Cha");
   return (

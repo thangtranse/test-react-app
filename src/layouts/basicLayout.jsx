@@ -14,7 +14,9 @@ function BasicLayout() {
           </Paper>
         </Grid>
         <Grid item xs={12} md={9} lg={9}>
-          <Outlet />
+          <div style={{ margin: 30, padding: 30, border: "1px solid pink" }}>
+            <Outlet />
+          </div>
         </Grid>
       </Grid>
     </>

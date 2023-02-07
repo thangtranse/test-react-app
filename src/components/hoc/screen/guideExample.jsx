@@ -3,7 +3,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
-import React from "react";
+import React, { memo } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 import WithWidthScreenHook from "./";
 
@@ -51,12 +51,22 @@ const CodeExampleRender = {
   },
 };
 
-export default function GuideExample({ propExpanded, onChangeAccordion }) {
+export default memo(function GuideExample() {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChangeAccordion = React.useCallback(
+    (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    },
+    [setExpanded]
+  );
+
+  console.log(`re-render GuideExample SCREEN`);
   return (
     <>
       <Accordion
-        expanded={propExpanded === "panel2"}
-        onChange={onChangeAccordion("panel2")}
+        expanded={expanded === "panel2"}
+        onChange={handleChangeAccordion("panel2")}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -110,4 +120,4 @@ export default function GuideExample({ propExpanded, onChangeAccordion }) {
       </Accordion>
     </>
   );
-}
+});

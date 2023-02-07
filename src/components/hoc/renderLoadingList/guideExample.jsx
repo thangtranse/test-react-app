@@ -1,9 +1,12 @@
+// REACRT
+import React, { memo } from "react";
+// MATERIAL
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
-import React from "react";
+// LIB
 import { CopyBlock, dracula } from "react-code-blocks";
 import EnhancedUserList from "./";
 
@@ -38,12 +41,22 @@ const EnhancedUserList = withLoading(UserList);`,
   },
 };
 
-export default function GuideExample({ propExpanded, onChangeAccordion }) {
+function GuideExample() {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChangeAccordion = React.useCallback(
+    (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    },
+    [setExpanded]
+  );
+
+  console.log(`re-render GuideExample LIST`);
   return (
     <>
       <Accordion
-        expanded={propExpanded === "panel1"}
-        onChange={onChangeAccordion("panel1")}
+        expanded={expanded === "panel1"}
+        onChange={handleChangeAccordion("panel1")}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -101,3 +114,5 @@ export default function GuideExample({ propExpanded, onChangeAccordion }) {
     </>
   );
 }
+
+export default memo(GuideExample);

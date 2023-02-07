@@ -1,21 +1,23 @@
+// REACT
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-
+// COMPONENT
 import BasicLayout from "./layouts/basicLayout";
-
 import Home from "./pages/Home";
-import OrialTest from "./pages/OrialTest";
-
 import MUIPage from "./pages/mui";
 import StyleCustomPage from "./pages/mui/StyleCustom";
-
-import Hook from "./pages/reacts/Hook";
-import StatePropPage from "./pages/reacts/StateProp";
-import Redux from "./pages/reacts/Redux";
-import Memo from "./pages/reacts/Memo";
-import UseReducer from "./pages/reacts/UseReducer";
-import CallBack from "./pages/reacts/CallBack";
-import UseContextPage from "./pages/reacts/UseContext";
+import OrialTest from "./pages/OrialTest";
+import ReactPage from "./pages/reacts";
+import CustomHookPage from "./pages/reacts/CustomHook";
 import HOCPage from "./pages/reacts/HOC";
+import Hook from "./pages/reacts/Hook";
+import Memo from "./pages/reacts/Memo";
+import Redux from "./pages/reacts/Redux";
+import StatePropPage from "./pages/reacts/StateProp";
+import CallBack from "./pages/reacts/UseCallBack";
+import UseContextPage from "./pages/reacts/UseContext";
+import UseMemoPage from "./pages/reacts/UseMemo";
+import UseReducer from "./pages/reacts/UseReducer";
 
 export default createBrowserRouter([
   {
@@ -47,7 +49,12 @@ export default createBrowserRouter([
     children: [
       {
         path: "",
-        element: <></>,
+        element: <ReactPage />,
+      },
+      {
+        path: "state-prop",
+        name: "State and Prop",
+        element: <StatePropPage />,
       },
       {
         path: "h-o-c",
@@ -55,9 +62,9 @@ export default createBrowserRouter([
         element: <HOCPage />,
       },
       {
-        path: "state-prop",
-        name: "State and Prop",
-        element: <StatePropPage />,
+        path: "custom-hook",
+        name: "Custom Hook",
+        element: <CustomHookPage />,
       },
       {
         path: "hook",
@@ -77,11 +84,11 @@ export default createBrowserRouter([
       {
         path: "useMemo",
         name: "useMemo (Hook)",
-        element: <Memo />,
+        element: <UseMemoPage />,
       },
       {
-        path: "callBack",
-        name: "CallBack",
+        path: "useCallBack",
+        name: "useCallBack",
         element: <CallBack />,
       },
       {
