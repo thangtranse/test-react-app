@@ -1,8 +1,14 @@
+import React from "react";
+import {
+  CountComponent,
+  CountComponentUseCallback,
+} from "../../components/callback/count";
 
 function CallBack() {
   return (
     <>
-    CallBack
+      <CountComponent />
+      <CountComponentUseCallback />
     </>
   );
 }

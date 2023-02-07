@@ -15,6 +15,7 @@ import Memo from "./pages/reacts/Memo";
 import UseReducer from "./pages/reacts/UseReducer";
 import CallBack from "./pages/reacts/CallBack";
 import UseContextPage from "./pages/reacts/UseContext";
+import HOCPage from "./pages/reacts/HOC";
 
 export default createBrowserRouter([
   {
@@ -49,6 +50,11 @@ export default createBrowserRouter([
         element: <></>,
       },
       {
+        path: "h-o-c",
+        name: "React Higher Order Component (HOC)",
+        element: <HOCPage />,
+      },
+      {
         path: "state-prop",
         name: "State and Prop",
         element: <StatePropPage />,
@@ -65,7 +71,12 @@ export default createBrowserRouter([
       },
       {
         path: "memo",
-        name: "Memo",
+        name: "memo (HOC)",
+        element: <Memo />,
+      },
+      {
+        path: "useMemo",
+        name: "useMemo (Hook)",
         element: <Memo />,
       },
       {
